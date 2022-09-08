@@ -46,7 +46,7 @@ def naive_algorithm(read, reference):
             matches.append(i)
     return(matches)
 
-def naive_algorithm_to_SAM(read_file, reference_file):
+def matches_to_SAM(read_file, reference_file):
     read_name = []
     reference_name = []
     match_index = []
