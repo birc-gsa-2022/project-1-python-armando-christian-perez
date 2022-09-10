@@ -55,8 +55,8 @@ def matches_to_SAM(read_file, reference_file):
 
     fasta_dict, fastq_dict = fasta_translator(reference_file), fastq_translator(read_file)
 
-    for i in fasta_dict:
-        for j in fastq_dict:
+    for j in fastq_dict:
+        for i in fasta_dict:
             matches_temp = naive_algorithm(fastq_dict[j], fasta_dict[i])
             if matches_temp:
                 for match in matches_temp: # Each iteration makes a SAM row
@@ -73,5 +73,5 @@ def print_SAM(SAM):
     for i in range(len(SAM[0])):
         sys.stdout.write(SAM[0][i] + "\t" + SAM[1][i] + "\t" + str(SAM[2][i]) + "\t" + SAM[3][i] + "\t" + SAM[4][i] + "\n")
 
-SAM = naive_algorithm_to_SAM(args.reads, args.genome)
+SAM = matches_to_SAM(args.reads, args.genome)
 print_SAM(SAM)
