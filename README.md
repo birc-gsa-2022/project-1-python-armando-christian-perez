@@ -84,15 +84,15 @@ Once you have implemented the tools, fill out the report below.
 
 ### Insights you may have had while implementing and comparing the algorithms. 
 
-*Describe this here.*
+I finally understood how the border array algorithm works, although it took several thorough reads of the chapter.
 
 ### Problems encountered if any. 
 
-*Describe this here.*
+A lot of hardship in understanding the linear algorithm and difficulty in deciding which data to test on, as well as how to test it.
 
 ### Experiments that verifies the correctness of your implementations.
 
-*Describe this here.*
+It returns the correct outputs?
 
 ### Experiments validating the running time.
 
