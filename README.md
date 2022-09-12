@@ -96,17 +96,11 @@ It returns the correct outputs?
 
 ### Experiments validating the running time.
 
-For this section, you should address the following:
+For validating running time, i ran tests on two types of strings. One in the format bbbb...a, one in random bases of DNA (actg). The first is the worst case for the naive algorithm, the second is a bad case for the linear algorithm, since there will be some random matches, and therefore a lot of border searching back and forth (i imagine), whereas the first type of data the linear algorithm will just check the last and second to last character throughout the string. It was also used to compare them on semi-real data. The experiments were conducted from around 10^3-10^7 characters on the reference string and 2^0-2^6 on the read string. All combinations are tested against one another
 
-* An experiment that verifies that your implementation of `naive` uses no more time than O(nm) to find all occurrences of a given pattern in a text. Remember to explain your choice of test data. What are “best” and “worst” case inputs? 
-
-* An experiment that verifies that your implementations of `lin` use no more time than O(n+m) to find all occurrences of a given pattern in a text. Remember to explain your choice of test data. What are “best” and “worst” case inputs?
-
-You can insert pictures here like this:
-
-```
-![](path/to/fig)
-```
+![](figs/Linear naive DNA comparison.png)
+![](figs/linear b...a.png)
+![](figs/naive b..a.png)
 
 I am not ready to share my own results yet, so I will just show you a fast scooter.
 
