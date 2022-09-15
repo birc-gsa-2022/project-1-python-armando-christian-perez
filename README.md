@@ -92,7 +92,7 @@ A lot of hardship in understanding the linear algorithm and difficulty in decidi
 
 ### Experiments that verifies the correctness of your implementations.
 
-It returns the correct outputs?
+I ran several tests on different types of data where i asserted() that the matches indeed were matches.
 
 ### Experiments validating the running time.
 
