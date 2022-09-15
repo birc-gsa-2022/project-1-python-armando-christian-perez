@@ -52,6 +52,8 @@ def border_array_algorithm(read):
 
 def border_array_search(read, reference, read_border_array):
     read_len = len(read)
+    if read_len == 0 or len(reference) == 0:
+        return([])
     read = read + "0"
     previous_border = 0
     matches = []
