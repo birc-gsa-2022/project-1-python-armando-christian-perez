@@ -67,7 +67,7 @@ def border_array_search(read, reference, read_border_array):
             else:
                 previous_border = read_border_array[previous_border - 1]
         if previous_border == read_len:
-            matches.append(i - len(read) + 2)
+            matches.append(i - len(read) + 1)
     return(matches)
 
 def matches_to_SAM(read_file, reference_file):
