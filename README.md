@@ -84,29 +84,25 @@ Once you have implemented the tools, fill out the report below.
 
 ### Insights you may have had while implementing and comparing the algorithms. 
 
-*Describe this here.*
+I finally understood how the border array algorithm works, although it took several thorough reads of the chapter.
 
 ### Problems encountered if any. 
 
-*Describe this here.*
+A lot of hardship in understanding the linear algorithm and difficulty in deciding which data to test on, as well as how to test it.
 
 ### Experiments that verifies the correctness of your implementations.
 
-*Describe this here.*
+I ran several tests on different types of data where i asserted() that the matches indeed were matches.
 
 ### Experiments validating the running time.
 
-For this section, you should address the following:
+For validating running time, i ran tests on two types of strings. One in the format bbbb...a, one in random bases of DNA (actg). The first is the worst case for the naive algorithm, the second is a bad case for the linear algorithm, since there will be some random matches, and therefore a lot of border searching back and forth (i imagine), whereas the first type of data the linear algorithm will just check the last and second to last character throughout the string. It was also used to compare them on semi-real data. The experiments were conducted from around 10^3-10^7 characters on the reference string and 2^0-2^6 on the read string. All combinations are tested against one another
 
-* An experiment that verifies that your implementation of `naive` uses no more time than O(nm) to find all occurrences of a given pattern in a text. Remember to explain your choice of test data. What are “best” and “worst” case inputs? 
+![](figs/Linear_naive_DNA_comparison.png)
 
-* An experiment that verifies that your implementations of `lin` use no more time than O(n+m) to find all occurrences of a given pattern in a text. Remember to explain your choice of test data. What are “best” and “worst” case inputs?
+![](figs/linear_b...a.png)
 
-You can insert pictures here like this:
-
-```
-![](path/to/fig)
-```
+![](figs/naive_b..a.png)
 
 I am not ready to share my own results yet, so I will just show you a fast scooter.
 
