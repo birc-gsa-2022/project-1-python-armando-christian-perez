@@ -6,8 +6,6 @@ argparser = argparse.ArgumentParser(
 argparser.add_argument("genome", type=argparse.FileType('r'))
 argparser.add_argument("reads", type=argparse.FileType('r'))
 args = argparser.parse_args()
-print(f"Find every reads in {args.reads.name} " +
-      f"in genome {args.genome.name}")
 
 def fasta_translator(file):
     output_dict = {}
@@ -38,6 +36,8 @@ def fastq_translator(file):
 
 def naive_algorithm(read, reference):
     matches = []
+    if len(read) == 0 or len(reference) == 0:
+        return(matches)
     for i in range(len(reference)- len(read) + 1):
         for j in range(len(read)):
             if not read[j] == reference[i + j]:
@@ -45,6 +45,8 @@ def naive_algorithm(read, reference):
         else:
             matches.append(i)
     return(matches)
+
+#fasta_dict, fastq_dict = fasta_translator(args.genome), fastq_translator(args.reads)
 
 def matches_to_SAM(read_file, reference_file):
     read_name = []
@@ -75,3 +77,12 @@ def print_SAM(SAM):
 
 SAM = matches_to_SAM(args.reads, args.genome)
 print_SAM(SAM)
+
+#print(fastq_dict)
+
+#for i in range(len(SAM[0])):
+#    read = SAM[4][i]
+#    read_len = len(read)
+#    reference = fasta_dict[SAM[1][i]][SAM[2][i]-1:SAM[2][i]-1+read_len]
+#    assert read == reference
+
